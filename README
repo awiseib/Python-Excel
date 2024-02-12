@@ -1,0 +1,12 @@
+# Required libraries:
+xlwings
+ibapi
+threading
+queue
+
+'''
+This library will be used in tandem with an IBKR API article series documenting "how to" implement these same files. Files present in the github may not always match current article releases, so users should be aware they may not be matched perfectly.
+'''
+
+# Current Release Expectations:
+Users reviewing these files should understand that this release is only designed as proof of concept of inserting Python data in real time to Excel. Additional features and behaviors will be added over time.
