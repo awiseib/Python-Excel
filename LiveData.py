@@ -1,7 +1,3 @@
-from ibapi.client import *
-from ibapi.wrapper import *
-from ibapi.ticktype import TickType, TickTypeEnum
-
 from utils import *
 
 class TestApp(EClient, EWrapper):
@@ -21,8 +17,3 @@ class TestApp(EClient, EWrapper):
       if tickType < 9:
         col = letterIncr(tickType)
         q.put([LD,"{}{}".format(col, reqId), str(size)])
-        
-if __name__ == '__main__':
-  app = TestApp()
-  app.connect("127.0.0.1", 7497, 1000)
-  app.run()

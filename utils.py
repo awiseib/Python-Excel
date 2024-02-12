@@ -3,6 +3,9 @@ import xlwings as xw
 from threading import Thread
 from queue import Queue
 from ibapi.ticktype import TickType, TickTypeEnum
+from ibapi.client import *
+from ibapi.wrapper import *
+import time
 
 BN = 'Python_Excel.xlsx'
 LD = 'Live_Data'
@@ -36,7 +39,7 @@ def write_to_workbook():
 
 q = Queue()
 
-for i in range(4):
+for i in range(50):
     t = Thread(
         target=write_to_workbook, 
         daemon=True

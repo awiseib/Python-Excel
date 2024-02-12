@@ -1,6 +1,5 @@
 from utils import *
 from LiveData import *
-import time
 
 port = 7496
 
