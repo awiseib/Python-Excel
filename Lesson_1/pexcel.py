@@ -1,4 +1,3 @@
-from utils import *
 from LiveData import *
 
 port = 7496
@@ -7,9 +6,9 @@ buildHeaders()
 app = TestApp()
 app.connect("127.0.0.1", port, 100)
 
-time.sleep(1)
+sleep(1)
 Thread(target=app.run).start()
-time.sleep(3)
+sleep(3)
 
 mycontract = Contract()
 mycontract.exchange = "SMART"
@@ -31,5 +30,3 @@ for enumer,symbol in enumerate(symbols):
         regulatorySnapshot=False,
         mktDataOptions=[],
     )
-
-    
