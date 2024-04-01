@@ -1,7 +1,7 @@
 from decimal import Decimal
+import time
 import xlwings as xw
 from threading import Thread
-import time
 from queue import Queue
 
 from ibapi.common import BarData, TickerId
