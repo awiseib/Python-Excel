@@ -1,5 +1,6 @@
 from decimal import Decimal
 import time
+from ibapi.contract import ContractDetails
 import xlwings as xw
 from threading import Thread
 from queue import Queue
@@ -38,6 +39,9 @@ class TestApp(EClient, EWrapper):
 
     def historicalData(self, reqId: int, bar: BarData):
         print(reqId, bar)
+
+    def contractDetails(self, reqId: TickerId, contractDetails: ContractDetails):
+        print(reqId, contractDetails)
 
     def error(self, reqId: TickerId, errorCode: int, errorString: str, advancedOrderRejectJson=""):
         q.put([LD,"J1", "{}: {}".format(errorCode, errorString)])
